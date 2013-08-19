@@ -138,7 +138,7 @@ BOOL CCamApp::bFirstRun = TRUE;
 // The background redraw may be changed to use a timer or some other method
 //
 
-#define CAM_TIMER_ID		 42
+#define CAM_TIMER_ID		42
 #define CAM_TIMER_FREQUENCY	100
 
 /***************************************************************************************************************************/
@@ -1963,11 +1963,11 @@ BOOL					WinArray[2];
 
 void CCamApp::OnIdle( wxIdleEvent &event )
 {
-//	TRACEUSER("Gerry", _T("CCamApp::OnIdle\n"));
+	TRACEUSER("Gerry", _T("CCamApp::OnIdle\n"));
 
 	if ( IsDisabled() || PrintMonitor::IsPrintingNow() )
 	{
-//		TRACEUSER("Gerry", _T("Disabled - Is this a bad thing????????\n"));
+		TRACEUSER("Gerry", _T("Disabled - Is this a bad thing????????\n"));
 		event.Skip();
 		return;
 	}
@@ -1982,7 +1982,7 @@ void CCamApp::OnIdle( wxIdleEvent &event )
 		event.RequestMore();
 	}
 
-//	TRACEUSER("Gerry", _T("MoreRequested = %s\n"), event.MoreRequested() ? _T("true") : _T("false"));
+	TRACEUSER("Gerry", _T("MoreRequested = %s\n"), event.MoreRequested() ? _T("true") : _T("false"));
 
 	// We *MUST* call Skip() here or you can't exit the program!
 	event.Skip();

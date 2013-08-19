@@ -510,7 +510,7 @@ TRACEUSER( "Jonathan", _T("PNG write: TransColour = %d\n"), TransparentColour);
 			png_set_invalid(png_ptr, info_ptr, PNG_INFO_PLTE);
 			INT32 PaletteEntries = pInfo->biClrUsed;
 
-			palette = (png_colorp)png_malloc(png_ptr, PNG_MAX_PALETTE_LENGTH * png_sizeof (png_color));
+			palette = (png_colorp)png_malloc(png_ptr, PNG_MAX_PALETTE_LENGTH * sizeof (png_color));
 			if (palette == NULL)
 				File->GotError( _R(IDS_OUT_OF_MEMORY) );
 
