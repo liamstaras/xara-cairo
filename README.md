@@ -6,36 +6,35 @@ An fast, 100% open source vector drawing program based on XaraLX
 Build Requirements
 ------------------
 
-* wxWidgets-2.8
-* gtk2-2.0
+* wxGTK-unicode-2.8
 * cairo-1.10
 * libxml-2.7
-* png-1.5
 * autoconf-2.6
 * automake-1.10
 * gettext-0.18
 * libtool-2.4
 * gmake-3.8
+* png-1.5
+* jpeg-9
 
 OpenBSD
 -------
 
     $ export AUTOMAKE_VERSION=1.10 AUTOCONF_VERSION=2.68
-    $ ./autogen.sh && ./configure --enable-filters
+    $ ./autogen.sh && ./configure
     $ gmake
 
 FreeBSD
 -------
 
-    # cd /usr/X11R6/bin
-    # ln wxgtk2u-2.8-config wx-config
-    $ ./autogen.sh && ./configure --enable-filters
+    $ sudo ln /usr/local/bin/wxgtk2u-2.8-config /usr/local/bin/wx-config
+    $ ./autogen.sh && ./configure
     $ gmake
 
-Linux
------
+Linux (Debian, Ubuntu)
+-----------------------
 
-    $ ./autogen.sh && ./configure --enable-filters
+    $ ./autogen.sh && ./configure
     $ make
 
 Fixes and Additions
@@ -55,7 +54,7 @@ Fixes and Additions
 - Build no longer requires svn and unzip
 - No more splash screen
 - Exclude files from the repo that are auto-generated or copied
-- Removed 4799 to obsolete header file references and DECLARE tags
+- Removed 4799 obsolete header file references and DECLARE tags
 - Allow user to select so-called virtual fonts, such as 'Monospace'
 
 (ed44)
@@ -68,6 +67,7 @@ Fixes and Additions
 History
 -------
 
+- 2013-08-19: Builds on OpenBSD 5.4 and FreeBSD 9.1
 - 2012-07-03: This fork of xara-cairo builds on Ubuntu 12, Debian 6.0, FreeBSD 9.0 and OpenBSD 5.1
 - 2010-05-11: First attempt at replacing CDraw with cairo [announced](http://lists.cairographics.org/archives/cairo/2010-May/019862.html) along with a new Git repo at git://repo.or.cz/xara-cairo.git
 - 2007-11-06: Last commit to SVN
