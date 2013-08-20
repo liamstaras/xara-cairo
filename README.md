@@ -12,7 +12,9 @@ Build Requirements
 * autoconf-2.6
 * automake-1.10
 * gettext-0.18
+* perl-5.4
 * libtool-2.4
+* zip-3
 * gmake-3.8
 * png-1.5
 * jpeg-9
@@ -51,7 +53,7 @@ Fixes and Additions
 - Compile on gcc 4.6 without -fpermissive
 - Removed conflicting jconfig.h to enable builds against libjpeg-turbo
 - Reduced source line count by 142k using a concise Copyright and GPLv2 notice
-- Build no longer requires svn and unzip
+- Build no longer requires svn
 - No more splash screen
 - Exclude files from the repo that are auto-generated or copied
 - Removed 4799 obsolete header file references and DECLARE tags
