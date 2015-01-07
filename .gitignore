@@ -33,7 +33,6 @@ stamp-h.in
 *-uninstalled.pc
 .vimrc
 *.gch
-wxOil/resources.h
 xara-cairo
 xarasvgfilter*
 m4/*
@@ -46,4 +45,5 @@ AUTHORS
 ABOUT-NLS
 missing
 wxOil/svnversion.h
+wxOil/xrc/EN/xrc.check
 COPYING
